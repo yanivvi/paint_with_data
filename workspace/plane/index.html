@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transparent iframe over picture</title>
+    <style>
+      /* Set the position and transparency of the iframe */
+      #iframe-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        z-index: 1;
+      }
+
+      /* Set the position of the picture */
+      #picture {
+        position: relative;
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="picture">
+     <img src="https://airlinesfleet.com/wp-content/uploads/2019/09/Seat-Map-and-Seating-Chart-Boeing-777-300ER-Two-Class-Layout-Garuda-Indonesia-1024x262.jpg" alt="Your Picture" width="2000" height="700" />
+    </div>
+    <div id="iframe-overlay">
+    <iframe src="PLANE_CHART_URL_FROM_REDASH" width="2000" height="1000" scrolling="no"></iframe>
+    </div>
+  </body>
+</html>
